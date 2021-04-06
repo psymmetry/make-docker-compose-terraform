@@ -1,4 +1,4 @@
-# :recycle: 
+# :recycle: Make, Docker and Docker-Compose
 
 ![image](docs/triforce.png)
 
