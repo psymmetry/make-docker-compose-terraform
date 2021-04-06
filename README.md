@@ -16,20 +16,37 @@ _Make is native to MacOS and all the different flavours of linux so no installat
 * [Docker + docker-compose](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
 
 ---
+## Setup
+
+1. _Before running `Make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. `AWS` is being used in this example skeleton repo to build an S3 bucket._
+
+2. As `*.tfvars` and `.backend` files are gitignored for sensitivity, these will need to be created before any **terraform** step can be called as backend configs are required for each environment. Below is an example of creating a `dev.tfvars` and `dev.backend` files in the `/infra/config/dev` folder:
+
+`./infra/config/dev/dev.backend:`
+```hcl
+bucket = "my-terraform-state-bucket"
+region = "ap-southeast-2"
+```
+`./infra/config/dev/dev.tfvars:`
+```hcl
+environment = "dev"
+region = "ap-southeast-2"
+bucket_name = "my-dev-bucket"
+```
+---
+
 ## Usage
 
-_Before running `Make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. `AWS` is being used in this example skeleton repo to build an S3 bucket._
-
 Run `terraform plan` :
-```
+```makefile
 make plan
 ```
 Run `terraform comply` step which runs terraform-compliance tests against the `terraform plan` :
-```
+```makefile
 make comply
 ```
 Run `terraform apply` :
-```
+```makefile
 make apply
 ```
 ---
