@@ -47,7 +47,7 @@ Run `terraform plan` :
 ```makefile
 make plan
 ```
-Run `terraform comply` step which runs terraform-compliance tests against the `terraform plan` :
+Run `terraform comply` step which runs [terraform-compliance](https://terraform-compliance.com/) tests against the `terraform plan` :
 ```makefile
 make comply
 ```
