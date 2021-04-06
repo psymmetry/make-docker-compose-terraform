@@ -1,4 +1,4 @@
-# :recycle: Triforce 
+# :recycle: 
 
 ![image](docs/triforce.png)
 
