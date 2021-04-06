@@ -56,4 +56,7 @@ make apply
 ## :bookmark_tabs: References:
 
 * [3 Musketeers](https://3musketeers.io/)
+* [Make](https://opensource.com/article/18/8/what-how-makefile/)
+* [Docker](https://www.docker.com/)
+* [Terraform](https://www.terraform.io/)
 * [Terraform Compliance](https://terraform-compliance.com/)
