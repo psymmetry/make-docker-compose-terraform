@@ -54,7 +54,7 @@ Run `terraform apply` :
 make apply
 ```
 
-### Example:
+### :rocket: Example:
 ![image](docs/example.gif)
 
 ---
