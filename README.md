@@ -22,7 +22,7 @@ _Make is native to MacOS and all the different flavours of linux so no installat
 
 1. Before running `make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. AWS is being used in this example skeleton repo to build an S3 bucket. There are a few open source tools such as [awsume](https://awsu.me/) that can perform this task quite well, especially if having to switch to multiple accounts.
 
-2. The `./infra/config/dev/dev.tfvars` file and  `./infra/config/dev/dev.backend` file both need to be updated before running `make` commands. Below is an example of `dev` environment variables being used. The same patter can be applied for other environments.
+2. The `./infra/config/dev/dev.tfvars` file and  `./infra/config/dev/dev.backend` file both need to be updated before running `make` commands. Below is an example of `dev` environment variables being used. The same pattern can be applied for other environments.
 
 `./infra/config/dev/dev.backend` Terraform state bucket and region:
 ```hcl
@@ -33,7 +33,7 @@ region = "ap-southeast-2"
 ```hcl
 environment = "dev"
 region = "ap-southeast-2"
-bucket_name = "my-s3-bucket-dev"
+bucket_name = "my-example-bucket-dev"
 ```
 ---
 
