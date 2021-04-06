@@ -20,7 +20,7 @@ _Make is native to MacOS and all the different flavours of linux so no installat
 ---
 ## :computer: Setup
 
-1. Before running `Make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. `AWS` is being used in this example skeleton repo to build an S3 bucket.
+1. Before running `Make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. `AWS` is being used in this example skeleton repo to build an S3 bucket. There are a few open source tools such as [awsume](https://awsu.me/) that can perform this task quite well, especially if having to switch to multiple accounts.
 
 2. As `*.tfvars` and `.backend` files are gitignored for sensitivity, these will need to be created before any **terraform** step can be called as backend configs are required for each environment. Below is an example of creating a `dev.tfvars` and `dev.backend` files in the `/infra/config/dev` folder:
 
@@ -55,5 +55,5 @@ make apply
 
 ## :bookmark_tabs: References:
 
-* https://3musketeers.io/
-* https://terraform-compliance.com/
+* [3 Musketeers](https://3musketeers.io/)
+* [Terraform Compliance](https://terraform-compliance.com/)
