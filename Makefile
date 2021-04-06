@@ -29,7 +29,7 @@ validate:
 		terraform validate
 
 # Generate a Terraform plan as an output file
-plan: init comply
+plan: init
 	echo "Building Terraform Plan"
 	docker-compose run \
 		--rm \
@@ -45,7 +45,7 @@ comply:
 		terraform-compliance --planfile $(TF_PLAN) --features /app/infra/tests/compliance
 
 # Deploy infrastructure with an expected Terraform plan file
-apply: plan comply
+apply: plan
 	echo "Deploying Terraform Plan"
 	docker-compose run \
 		--rm \
