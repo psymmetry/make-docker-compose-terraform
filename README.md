@@ -39,7 +39,7 @@ bucket_name = "my-example-bucket-dev"
 
 ## :mega: Usage
 
-_All `terraform` commands can be found within the `Makeile` if required to run certain steps individually. Below is an example of building a plan, running compliance tests against that plan and then deploying that plan to the "dev" environment. The default value for $ENVIRONMENT is "dev" so this variable would need updating when deploying to other environments._
+_All `terraform` commands can be found within the `Makeile` if required to run certain steps individually. Below is an example of building a plan, running compliance tests against that plan and then deploying that plan to the "dev" environment. The default value for `$ENVIRONMENT` is "dev" so this variable would need updating when deploying to other environments._
 
 Run `terraform plan` :
 ```makefile
