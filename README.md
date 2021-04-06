@@ -22,7 +22,7 @@ _Make is native to MacOS and all the different flavours of linux so no installat
 ---
 ## :computer: Setup
 
-1. Before running `make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. AWS is being used in this example to build an S3 bucket. There are a few open source tools such as [awsume](https://awsu.me/) that can perform this task quite well, especially when switching between multiple accounts.
+1. Before running `make` commands, you'll first need to **authenticate** to the cloud provider you're using when running commands locally. **AWS** is being used in this example to build an S3 bucket. There are a few open source tools such as [awsume](https://awsu.me/) that can perform this task quite well, especially when switching between multiple accounts.
 
 2. The `./infra/config/dev/dev.tfvars` file and  `./infra/config/dev/dev.backend` file both need to be updated before running `make` commands. Below is an example of `dev` environment variables being used. The same pattern can be applied for other environments.
 
@@ -41,7 +41,7 @@ bucket = "my-example-bucket-dev"
 
 ## :mega: Usage
 
-_All `make` commands can be found within the `Makeile` if required to run certain functions individually. Below is an example of building a terraform plan, running compliance tests against that plan and then deploying to a "dev" AWS environment. The default value for `$ENVIRONMENT` is "dev" so this variable would need updating when deploying to other environments._
+_All `make` commands can be found within the `Makeile` if required to run certain functions individually. Below is an example of building a terraform plan, running compliance tests against that plan and then deploying to a "dev" AWS environment. The default value for `$ENVIRONMENT` is "dev" so this variable would need updating when deploying to other environments, for example: `make plan ENVIRONMENT="prod"`._ 
 
 * Run a step that performs a `terraform init` to the backend and `terraform plan` :
 ```makefile
