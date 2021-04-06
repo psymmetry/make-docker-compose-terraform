@@ -4,7 +4,7 @@ A skeleton repo that makes use of `Make`, `Docker` and `docker-compose`. A patte
 
 ---
 
-## Prerequisites
+## :heavy_check_mark: Prerequisites
 
 _Make is native to MacOS and all the different flavours of linux so no installation is required._
 
@@ -16,7 +16,7 @@ _Make is native to MacOS and all the different flavours of linux so no installat
 * [Docker + docker-compose](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
 
 ---
-## Setup
+## :computer: Setup
 
 1. Before running `Make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. `AWS` is being used in this example skeleton repo to build an S3 bucket.
 
@@ -35,7 +35,7 @@ bucket_name = "my-dev-bucket"
 ```
 ---
 
-## Usage
+## :mega: Usage
 
 Run `terraform plan` :
 ```makefile
@@ -51,7 +51,7 @@ make apply
 ```
 ---
 
-## References:
+## :bookmark_tabs: References:
 
 * https://3musketeers.io/
 * https://terraform-compliance.com/
