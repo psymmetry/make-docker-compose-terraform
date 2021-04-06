@@ -43,15 +43,15 @@ bucket = "my-example-bucket-dev"
 
 _All `make` commands can be found within the `Makeile` if required to run certain functions individually. Below is an example of building a terraform plan, running compliance tests against that plan and then deploying to a "dev" AWS environment. The default value for `$ENVIRONMENT` is "dev" so this variable would need updating when deploying to other environments._
 
-Run `terraform plan` :
+* Run a step that performs a `terraform init` to the backend and `terraform plan` :
 ```makefile
 make plan
 ```
-Run `terraform comply` step which runs [terraform-compliance](https://terraform-compliance.com/) tests against the `terraform plan` :
+* Run a step that performs a [terraform-compliance](https://terraform-compliance.com/) test against the `terraform plan` :
 ```makefile
 make comply
 ```
-Run `terraform apply` :
+* Run a step that performs a `terraform apply` step to deploy `terraform plan` to AWS:
 ```makefile
 make apply
 ```
