@@ -4,7 +4,7 @@
 ENVIRONMENT ?= dev
 
 # Terraform related configuration
-TF_STATE_KEY = triforce.tfstate
+TF_STATE_KEY = examples-make-docker-compose-terraform.tfstate
 TF_BACKEND_CONFIG = config/$(ENVIRONMENT)/$(ENVIRONMENT).backend
 TF_VARIABLES = config/$(ENVIRONMENT)/$(ENVIRONMENT).tfvars
 TF_PLAN = $(ENVIRONMENT)-terraform.plan

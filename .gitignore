@@ -4,8 +4,6 @@
 .DS_Store
 
 ## Terraform
-*.backend
-*.tfvars
 *.plan
 *.plan.json
 *.tfplan

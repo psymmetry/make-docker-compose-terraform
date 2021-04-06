@@ -20,20 +20,20 @@ _Make is native to MacOS and all the different flavours of linux so no installat
 ---
 ## :computer: Setup
 
-1. Before running `Make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. `AWS` is being used in this example skeleton repo to build an S3 bucket. There are a few open source tools such as [awsume](https://awsu.me/) that can perform this task quite well, especially if having to switch to multiple accounts.
+1. Before running `make` commands, you will first need to **authenticate** to the cloud provider you're using when running commands locally. `AWS` is being used in this example skeleton repo to build an S3 bucket. There are a few open source tools such as [awsume](https://awsu.me/) that can perform this task quite well, especially if having to switch to multiple accounts.
 
-2. As `*.tfvars` and `.backend` files are gitignored for sensitivity, these will need to be created before any **terraform** step can be called as backend configs are required for each environment. Remember to remove these filetypes from `.gitignore` if you require these files source controlled. Below is an example of creating a `dev.tfvars` and `dev.backend` file in the `/infra/config/dev` folder:
+2. The `./infra/config/dev/dev.tfvars` file and  `./infra/config/dev/dev.backend` file both need to be updated before running `make` commands. Below is an example of `dev` environment variables being used. The same patter can be applied for other environments.
 
-`./infra/config/dev/dev.backend:`
+`./infra/config/dev/dev.backend` Terraform state bucket and region:
 ```hcl
-bucket = "my-terraform-state-bucket"
+bucket = "my-terraform-state-bucket-dev"
 region = "ap-southeast-2"
 ```
-`./infra/config/dev/dev.tfvars:`
+`./infra/config/dev/dev.tfvars` Terraform infrastructure variables:
 ```hcl
 environment = "dev"
 region = "ap-southeast-2"
-bucket_name = "my-dev-bucket"
+bucket_name = "my-s3-bucket-dev"
 ```
 ---
 
@@ -53,6 +53,10 @@ Run `terraform apply` :
 ```makefile
 make apply
 ```
+
+### Example:
+![image](docs/example.gif)
+
 ---
 
 ## :bookmark_tabs: References:
