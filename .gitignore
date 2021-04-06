@@ -1,0 +1,23 @@
+## General
+*.dll
+*.exe
+.DS_Store
+
+## Terraform
+*.backend
+*.tfvars
+*.plan
+*.plan.json
+*.tfplan
+*.tfstate
+*.backup
+./*.tfstate
+.terraform/
+*.hcl
+*.log
+*.bak
+*~
+.*.swp
+.idea
+*.iml
+*.test
