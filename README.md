@@ -39,6 +39,8 @@ bucket_name = "my-dev-bucket"
 
 ## :mega: Usage
 
+_All `terraform` commands can be found within the `Makeile`, but only the following are required to deploy to your environment._
+
 Run `terraform plan` :
 ```makefile
 make plan
