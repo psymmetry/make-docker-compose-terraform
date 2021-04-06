@@ -33,7 +33,7 @@ region = "ap-southeast-2"
 ```hcl
 environment = "dev"
 region = "ap-southeast-2"
-bucket_name = "my-example-bucket-dev"
+bucket = "my-example-bucket-dev"
 ```
 ---
 
