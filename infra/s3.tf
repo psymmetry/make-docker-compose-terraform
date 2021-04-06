@@ -6,8 +6,3 @@ resource "aws_s3_bucket" "bucket" {
     Environment = "Dev"
   }
 }
-
-variable bucket_name {
-  default = "joshi-psymmetry-dev"
-  type = string
-}

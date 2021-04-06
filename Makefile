@@ -9,13 +9,12 @@ TF_BACKEND_CONFIG = config/$(ENVIRONMENT)/$(ENVIRONMENT).backend
 TF_VARIABLES = config/$(ENVIRONMENT)/$(ENVIRONMENT).tfvars
 TF_PLAN = $(ENVIRONMENT)-terraform.plan
 
-# Dotnet build
-build:
-	docker-compose run --rm dotnet /bin/sh -c "./scripts/package.sh"
-
-# Dotnet build
-upload:
-	docker-compose run --rm --entrypoint "/bin/bash -c" awscli  "./scripts/uploadLambdaZip.sh"
+# Initialise Terraform state file
+init: clean
+	docker-compose run \
+		--rm \
+		--entrypoint terraform \
+		terraform init -backend-config=$(TF_BACKEND_CONFIG) -backend-config=key=$(TF_STATE_KEY) -reconfigure
 
 # Validate syntax on current Terraform configuration
 validate: 
@@ -43,7 +42,7 @@ comply:
 	docker-compose run \
 		--rm \
 		--entrypoint terraform-compliance \
-		terraform-compliance --planfile $(TF_PLAN) --features /app/infra/tests
+		terraform-compliance --planfile $(TF_PLAN) --features /app/infra/tests/compliance
 
 # Deploy infrastructure with an expected Terraform plan file
 apply: plan comply
@@ -60,13 +59,6 @@ destroy: init
 		--rm \
 		--entrypoint terraform \
 		terraform destroy -auto-approve
-
-# Initialise Terraform state file
-init: clean
-	docker-compose run \
-		--rm \
-		--entrypoint terraform \
-		terraform init -backend-config=$(TF_BACKEND_CONFIG) -backend-config=key=$(TF_STATE_KEY) -reconfigure
 
 # Remove left over terraform configuration and any left over docker networks
 clean:
