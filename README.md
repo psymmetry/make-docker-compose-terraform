@@ -1,4 +1,4 @@
-# :recycle: Make, Docker and Docker-Compose
+# :recycle: Make, Docker-Compose and Terraform
 
 ![image](docs/triforce.png)
 
