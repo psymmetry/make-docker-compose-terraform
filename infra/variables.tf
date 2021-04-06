@@ -1,9 +1,11 @@
-variable "region" {
-    default = "ap-southeast-2"
+variable "environment" {
     type = string
 }
 
-variable bucket_name {
-    default = "joshi-psymmetry-dev"
+variable "region" {
+    type = string
+}
+
+variable "bucket_name" {
     type = string
 }
