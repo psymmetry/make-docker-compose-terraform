@@ -2,7 +2,7 @@
 
 ![image](docs/triforce.png)
 
-A skeleton repo uses `make`, `docker` and `docker-compose` and `terraform` to deploy an S3 Bucket in AWS. The idea is this repo can be modified or extended to include extra steps to build/pack application code as well. This pattern is used to minimise the dependencies and reliance on **cicd** tools/agents/systems so that steps used in **cicd** environments can be replicated exactly the same way locally, decreasing complexity as a result.
+A skeleton repo uses `make`, `docker-compose` and `terraform` to deploy an S3 Bucket in AWS. The idea is this repo can be modified or extended to include extra steps to build/pack application code as well. This pattern is used to minimise the dependencies and reliance on **cicd** tools/agents/systems so that steps used in **cicd** environments can be replicated exactly the same way locally, decreasing complexity as a result.
 
 ---
 
