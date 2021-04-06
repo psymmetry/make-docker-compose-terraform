@@ -1,8 +1,8 @@
-# :recycle: Make, Docker and Docker-Compose
+# :recycle: Make, Docker-Compose and Terraform
 
 ![image](docs/triforce.png)
 
-A skeleton repo uses `Make`, `Docker` and `docker-compose` to deploy an S3 Bucket in AWS using Terraform. This repo can be extended to include extra steps to build/pack application code. This pattern is used to minimise the dependencies and reliance on **cicd** tools/agents/systems so that steps used in **cicd** environments can be replicated exactly the same way locally, decreasing complexity as a result.
+A skeleton repo that uses `make`, `docker-compose` and `terraform` to deploy an S3 Bucket in AWS. The idea is that this "template" can be modified or extended to include extra steps to build/pack application code as well. This pattern is used to minimise the dependencies and reliance on **cicd** tools/agents/systems so that steps used in **cicd** environments can be replicated exactly the same way locally, decreasing complexity as a result.
 
 ---
 
@@ -39,7 +39,7 @@ bucket_name = "my-example-bucket-dev"
 
 ## :mega: Usage
 
-_All `terraform` commands can be found within the `Makeile` if required to run certain steps individually. Below is an example of building a plan, running compliance tests against that plan and then deploying that plan to the "dev" environment. The default value for $ENVIRONMENT is "dev" so this variable would need updating when deploying to other environments._
+_All `terraform` commands can be found within the `Makeile` if required to run certain steps individually. Below is an example of building a plan, running compliance tests against that plan and then deploying that plan to the "dev" environment. The default value for `$ENVIRONMENT` is "dev" so this variable would need updating when deploying to other environments._
 
 Run `terraform plan` :
 ```makefile
