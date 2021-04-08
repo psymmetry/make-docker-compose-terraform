@@ -1,0 +1,1 @@
+print("\033[1;32;40m Hello from the scripts/python.py file :D \n")

@@ -1,5 +1,9 @@
 .SILENT:
 
+RED = '\033[1;31m'
+CYAN = '\033[0;36m'
+NC = '\033[0m'
+
 # Default variables
 ENVIRONMENT ?= dev
 
@@ -8,6 +12,14 @@ TF_STATE_KEY = examples-make-docker-compose-terraform.tfstate
 TF_BACKEND_CONFIG = config/$(ENVIRONMENT)/$(ENVIRONMENT).backend
 TF_VARIABLES = config/$(ENVIRONMENT)/$(ENVIRONMENT).tfvars
 TF_PLAN = $(ENVIRONMENT)-terraform.plan
+
+# Make > docker-compose > python script example
+hello:
+	echo "Running python docker container to run python script..."
+	docker-compose run \
+		--rm \
+		python \
+		python scripts/hello.py
 
 # Initialise Terraform state file
 init: clean

@@ -25,3 +25,9 @@ services:
     working_dir: /app/infra
     volumes:
       - ./infra:/app/infra/:rw
+
+  python:
+    image: python:latest
+    working_dir: /app
+    volumes:
+      - .:/app/:rw
