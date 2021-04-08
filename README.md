@@ -21,7 +21,7 @@ _Make is native to MacOS and all the different flavours of linux so no installat
 
 ---
 
-### TLDR Example
+### :zap: TLDR Example
 
 _The below `make` command downloads the official python docker container from dockerhub, then mounts to the host file system and runs the `scripts/hello.py` script. Making use of the same pattern of `make > docker-compose > script/terraform/etc`_
 
