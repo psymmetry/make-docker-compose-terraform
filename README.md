@@ -4,7 +4,9 @@
 
 ![image](docs/triforce.png)<br />
 <br />
-A simple pattern that uses `make`, `docker-compose` and `terraform` to deploy "most of the things" to the cloud. The idea is that this pattern can be modified or extended to include extra steps to build/pack application code as well. This pattern is used to minimise the dependencies and reliance on external systems so that **cicd** steps used in different environments can be replicated exactly the same way locally (or your chosen **cicd** system), decreasing complexity as a result.
+A simple pattern that uses `make`, `docker-compose` and `terraform` to deploy "most of the things" to the cloud. The idea is that this pattern can be modified or extended to include extra steps to build/pack application code as well. `terraform` is just a flavour but this could be subbed out for a `script` or `awscli` etc, assuming you have the docker container to support that action. <br />
+<br />
+This pattern is used to minimise the dependencies and reliance on external systems so that **cicd** steps used in different environments can be replicated exactly the same way locally (or your chosen **cicd** system), decreasing complexity as a result.
 
 ---
 
